@@ -16,11 +16,11 @@ let firstTeacher : Teacher = {
   Loyal: true
 };
 
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number
 }
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
