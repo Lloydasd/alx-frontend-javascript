@@ -51,7 +51,7 @@ interface studentConstructor {
   new(firstName: string, lastName: string):requirement
 }
 
-class studentClass implements requirement {
+class StudentClass implements requirement {
   firstName: string
   lastName: string
   
@@ -71,5 +71,5 @@ class studentClass implements requirement {
 
 
 }
-const student1 = new studentClass('Lloyd','Asiedu');
+const student1 = new StudentClass('Lloyd','Asiedu');
   console.log(student1.displayName());
