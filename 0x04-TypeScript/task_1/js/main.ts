@@ -51,6 +51,8 @@ interface StudentConstructor {
   new(firstName: string, lastName: string):Requirement
 }
 
+// class StudentClass {
+
 class StudentClass implements Requirement {
   firstName: string
   lastName: string
