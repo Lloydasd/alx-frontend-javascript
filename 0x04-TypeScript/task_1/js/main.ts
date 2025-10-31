@@ -38,20 +38,20 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 
 printTeacher('John','Doe');""
 
-interface requirement {
+interface Requirement {
   firstName: string
   lastName: string
-  workOnHomework: ()=> string
-  displayName: ()=> string
+  workOnHomework(): string
+  displayName(): string
 
 
 }
 
-interface studentConstructor {
-  new(firstName: string, lastName: string):requirement
+interface StudentConstructor {
+  new(firstName: string, lastName: string):Requirement
 }
 
-class StudentClass implements requirement {
+class StudentClass implements Requirement {
   firstName: string
   lastName: string
   
@@ -62,10 +62,10 @@ class StudentClass implements requirement {
     this.lastName = lastName
   }
 
-  workOnHomework(){
+  workOnHomework():string{
     return 'Currently working'
   };
-  displayName(){
+  displayName():string{
     return `${this.firstName}`
   }
 
