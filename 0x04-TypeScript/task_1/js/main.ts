@@ -1,4 +1,4 @@
-interface Teacher  {
+ interface Teacher  {
   readonly firstName: string
   readonly lastName: string
   fullTimeEmployee: boolean
@@ -75,3 +75,4 @@ class StudentClass implements Requirement {
 }
 const student1 = new StudentClass('Lloyd','Asiedu');
   console.log(student1.displayName());
+
