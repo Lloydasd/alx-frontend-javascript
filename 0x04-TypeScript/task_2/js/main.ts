@@ -10,7 +10,7 @@ interface TeacherInterface {
   workTeacherTasks(): string
 }
 
-class Director implements DirectorInterface{
+class Director implements DirectorInterface {
   workFromHome(): string {
     return 'Working from home'
   }
@@ -22,7 +22,7 @@ class Director implements DirectorInterface{
   }
 }
 
-class Teacher implements TeacherInterface{
+class Teacher implements TeacherInterface {
   workFromHome(): string {
     return 'Cannot work from home'
   }
@@ -43,3 +43,21 @@ function createEmployee(salary: number|string){
 }
 
 console.log(createEmployee(200));
+
+function isDirector(employee: Teacher | Director):employee is Director{
+  return employee instanceof Director
+}
+
+function executeWork(employee : Teacher | Director){
+  if(isDirector(employee)){
+    return employee.workDirectorTasks()
+  }else {
+    return employee.workTeacherTasks()
+  }
+}
+
+const director = new Director();
+const teacher = new Teacher ();
+
+console.log(executeWork(director));
+console.log(executeWork(teacher));
