@@ -44,20 +44,14 @@ function createEmployee(salary: number|string){
 
 console.log(createEmployee(200));
 
-function isDirector(employee: Teacher | Director):employee is Director{
-  return employee instanceof Director
+type Subjects = 'Math' | 'History'
+
+function teachClass(todayClass:Subjects){
+ if(todayClass === 'Math'){
+  return 'Teaching Math' 
+ } else {
+  return 'Teaching History'
+ }
 }
 
-function executeWork(employee : Teacher | Director){
-  if(isDirector(employee)){
-    return employee.workDirectorTasks()
-  }else {
-    return employee.workTeacherTasks()
-  }
-}
-
-const director = new Director();
-const teacher = new Teacher ();
-
-console.log(executeWork(director));
-console.log(executeWork(teacher));
+console.log(teachClass('Math'));
