@@ -1,6 +1,6 @@
 /// <reference path="./interface.ts" />
 
-declare function insertRow(row: RowElement): RowID;
+declare function insertRow(row: RowElement): number;
 
 declare function deleteRow(rowId: RowID): void;
 
